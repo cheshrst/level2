@@ -1,7 +1,7 @@
-package ru.gb.level2.lesson1;
+package lesson_1;
 
-public class Robot extends Team {
-    public Robot(String name, int jumpRange, int runRange) {
+public class Human extends Team {
+    public Human(String name, int jumpRange, int runRange) {
         super(name, jumpRange, runRange);
     }
 

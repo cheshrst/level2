@@ -1,4 +1,4 @@
-package ru.gb.level2.lesson1;
+package lesson_1;
 
 public class Team {
     String name;
