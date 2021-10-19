@@ -11,9 +11,7 @@ public class StartApp {
             System.out.println(sum);
         } catch (MyArrayDataException e) {
         }
-//    try {
-//        System.out.println(massLength(mass));
-//    }catch (MyArraySizeException e){}
+
 //    System.out.println("Sum = " + massData(mass));
     }
 
