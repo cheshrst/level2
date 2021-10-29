@@ -13,4 +13,4 @@
 
 
 
-                                                      ![alt-текст](https://gbcdn.mrgcdn.ru/uploads/avatar/1691315/attachment/thumb-ab111c8254aeaf710697ea87a90933ad.jpg "Максим Добрынин")
+![alt-текст](https://gbcdn.mrgcdn.ru/uploads/avatar/1691315/attachment/thumb-ab111c8254aeaf710697ea87a90933ad.jpg "Максим Добрынин")
