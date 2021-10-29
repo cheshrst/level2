@@ -2,8 +2,8 @@ package lesson5;
 
 public class StartApp {
     public static void main(String[] args) {
-//        MyMethod.fillMassThread();
-//        MyMethod.fillMassWithoutThread();
+        MyMethod.fillMassThread();
+        MyMethod.fillMassWithoutThread();
         FirstMethod.fillMass();
         SecondMethod.fillMass();
     }
