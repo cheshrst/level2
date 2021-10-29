@@ -1,4 +1,4 @@
-package lesson_1;
+package lesson1;
 
 public class Human extends Team {
     public Human(String name, int jumpRange, int runRange) {

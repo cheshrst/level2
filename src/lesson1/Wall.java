@@ -1,9 +1,13 @@
-package lesson_1;
+package lesson1;
 
-public class Treadmill extends Task {
-    static int range;
-    public Treadmill(int range){
+public class Wall extends Task {
+
+
+
+    int range;
+    public Wall(int range){
         this.range = range;
+
     }
     public double getRange() {
         return range;
@@ -11,6 +15,7 @@ public class Treadmill extends Task {
 
     public void setRange(int range) {
         this.range = range;
-
     }
+
+
 }

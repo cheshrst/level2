@@ -1,4 +1,4 @@
-package lesson_1;
+package lesson1;
 
 public class Robot extends Team {
     public Robot(String name, int jumpRange, int runRange) {
