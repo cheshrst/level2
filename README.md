@@ -11,4 +11,7 @@ LEVEL 2 ->
 | Шестое *домашнее задание* | [~*CLICK*~](https://www.google.com/) | **?** |
 | Седьмое *домашнее задание*     | [~*CLICK*~](https://www.google.com/) | **?** |
 | Восьмое *домашнее задание* | [~*CLICK*~](https://www.google.com/) | **?** |
+
+
+
 ![alt-текст](https://gbcdn.mrgcdn.ru/uploads/avatar/1691315/attachment/thumb-ab111c8254aeaf710697ea87a90933ad.jpg "Максим Добрынин")
