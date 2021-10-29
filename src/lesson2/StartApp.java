@@ -12,7 +12,7 @@ public class StartApp {
         } catch (MyArrayDataException e) {
         }
 
-//    System.out.println("Sum = " + massData(mass));
+
     }
 
     public static String massLength(String[][] mass) throws MyArraySizeException {
