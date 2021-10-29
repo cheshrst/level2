@@ -1,4 +1,4 @@
-# LEVEL 2 
+LEVEL 2 
 GeekBrains
 ------
 [Первое *домашнее задание* ](https://github.com/cheshrst/level2/tree/master/src/lesson1 "Lesson 1")
