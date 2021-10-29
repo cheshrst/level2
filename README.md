@@ -1,5 +1,5 @@
 LEVEL 2 -> 
-GeekBrains
+**GeekBrains**
 ------
 
 | Задания       | Ссылка                | Оценка |
