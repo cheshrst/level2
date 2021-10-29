@@ -1,7 +1,7 @@
 LEVEL 2 -> 
 **GeekBrains**
 ------
-![alt-текст] https://gbcdn.mrgcdn.ru/uploads/avatar/1691315/attachment/thumb-ab111c8254aeaf710697ea87a90933ad.jpg "Максим Добрынин"
+![alt-текст](https://gbcdn.mrgcdn.ru/uploads/avatar/1691315/attachment/thumb-ab111c8254aeaf710697ea87a90933ad.jpg "Максим Добрынин")
 | Задания       | Ссылка                | Оценка |
 | ------------- |:------------------:| -----:|
 | Первое *домашнее задание*     | [*CLICK* ](https://github.com/cheshrst/level2/tree/master/src/lesson1 "Lesson 1")| **4** |
