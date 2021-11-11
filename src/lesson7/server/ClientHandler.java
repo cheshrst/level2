@@ -62,7 +62,10 @@ public class ClientHandler {
                     String[] message = inboundMessage.split(credentials[1]);
                     String msg = message[1];
                     String client = credentials[1];
-                    server.wisperMsg(this.getName(), client, msg);
+                    if(!server.isUsernameOccupied(client)){
+                        sendMessage("Client not found");
+                    }else{
+                    server.wisperMsg(this.getName(), client, msg);}
                 } else {
                     server.broadcastMessage(this.getName() + ":" + inboundMessage);
                 }
