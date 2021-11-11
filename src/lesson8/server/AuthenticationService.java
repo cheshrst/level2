@@ -1,9 +1,8 @@
-package lesson7.server;
+package lesson8.server;
 
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
-import java.util.function.Predicate;
 
 
 public class AuthenticationService {
@@ -15,12 +14,7 @@ public class AuthenticationService {
     );
 
     public Optional<String> findNickByLoginAndPassword(String login, String password) {
-//        for (User u: users){
-//            if (u.getLogin().equals(login) && u.getPassword().equals(password)){
-//                return Optional.of(u.getUsername());
-//            }
-//        }
-//        return Optional.empty();
+
 
         return users.stream()
                  //try catch?
@@ -29,10 +23,7 @@ public class AuthenticationService {
                 .map(User::getUsername);
     }
 
-//    public Optional<String> sendPrivateMessage(String from, String to, String msg){
-//        users.stream()
-//
-//    }
+
 
 
     private static class User{

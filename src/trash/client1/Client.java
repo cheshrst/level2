@@ -1,4 +1,4 @@
-package lesson7.client3;
+package trash.client1;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

@@ -1,4 +1,4 @@
-package lesson7.client1;
+package trash.client1;
 
 import lesson7.client.Client;
 
