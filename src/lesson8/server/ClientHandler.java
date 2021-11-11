@@ -50,16 +50,6 @@ public class ClientHandler {
         }
     }
 
-//    private void clientLost(){
-//        while (true){
-
-
-//            Set<ClientHandler> loggedClients = server.getLoggedClients();
-//            for(int i = 0; i < loggedClients.size(); i++){
-//                if(loggedClients)
-//            }
-//        }
-//    }
 
         private void commandsWithMsg() throws IOException {
 
