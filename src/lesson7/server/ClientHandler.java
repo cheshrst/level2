@@ -26,8 +26,8 @@ public class ClientHandler {
             throw new RuntimeException("Smth went wrong ", ex);
         }
         doAuthication();
-//        privateMessage();
-        listenMessages();
+        commands();
+
     }
 
 
@@ -42,24 +42,34 @@ public class ClientHandler {
             throw new RuntimeException("Smth went wrong during a client authetication", ex);
         }
     }
+    private void commands(){
+        try {
+            commandsWithMsg();
+        }catch (IOException ex){
+            throw new RuntimeException("Smth went wrong with commands", ex);
+        }
+    }
 
 
 
 
-//    private void privateMessage() throws IOException{
-//        new Thread(() -> {
-//            String inboundMessage = null;
-//            try {
-//                inboundMessage = server.;
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//            if (inboundMessage.startsWith("-pm")){
-//            String to = inboundMessage.split("\\s")[1];
-//            String msg = inboundMessage.split("\\s")[2];
-//            server.wisperMsg(this, to, msg);
-//        }
-//        }).start();
+        private void commandsWithMsg() throws IOException {
+
+        while (true) {
+                String inboundMessage = in.readUTF();
+                if (inboundMessage.startsWith("-pm")) {
+                    String[] credentials = inboundMessage.split("\\s");
+                    String[] message = inboundMessage.split(credentials[1]);
+                    String msg = message[1];
+                    String client = credentials[1];
+                    server.wisperMsg(this.getName(), client, msg);
+                } else {
+                    server.broadcastMessage(this.getName() + ":" + inboundMessage);
+                }
+            }
+        }
+
+
 
 
 
@@ -131,20 +141,20 @@ public class ClientHandler {
 
 
 
-    public void readMessage(){
-                try {
+//    public void readMessage(){
+//                try {
+//
+//                    server.broadcastMessage(in.readUTF());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
 
-                    server.broadcastMessage(in.readUTF());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    public void listenMessages(){
-        while (true){
-
-            readMessage();
-        }
-    }
+//    public void listenMessages(){
+//        while (true){
+//
+//            readMessage();
+//        }
+//    }
 }

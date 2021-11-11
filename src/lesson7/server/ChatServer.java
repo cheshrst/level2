@@ -49,16 +49,16 @@ public class ChatServer {
     }
 
 
-    public void wisperMsg(ClientHandler from, String to, String msg)
+    public void wisperMsg(Object from, String to, String msg)
     {
 
         for (ClientHandler client: loggedClients) {
-            if(client.getName().equals(to)) {
-                client.sendMessage("[W from: " + from.getName() + "] " + msg);
+            if(client.getName().equals(to) && isUsernameOccupied(to)) {
+                client.sendMessage("[Msg from: " + from +   "] " + msg);
                 break;
             }
         }
-        from.sendMessage("[W to: " + to + "] " + msg);
+
     }
 
 
