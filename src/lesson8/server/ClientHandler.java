@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.net.SocketException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class ClientHandler {
@@ -32,8 +33,10 @@ public class ClientHandler {
     public String getName() {
         return name;
     }
+
     private void doAuthication(){
         try {
+            timeout(12);
             performAuthentication();
         }catch (IOException ex){
             throw new RuntimeException("Smth went wrong during a client authetication", ex);
@@ -49,16 +52,6 @@ public class ClientHandler {
         }
     }
 
-//    private void clientLost(){
-//        while (true){
-
-
-//            Set<ClientHandler> loggedClients = server.getLoggedClients();
-//            for(int i = 0; i < loggedClients.size(); i++){
-//                if(loggedClients)
-//            }
-//        }
-//    }
 
         private void commandsWithMsg() throws IOException {
 
@@ -85,13 +78,20 @@ public class ClientHandler {
 
 
 
+    private void timeout(int time){
+        try {
+            this.socket.setSoTimeout(1000 * time); // 0 - infinity
+        } catch (SocketException ex) {
+            throw new RuntimeException("Smth went wrong with timeout", ex);
+        }
+    }
+
 
 
 
     private void performAuthentication() throws IOException{
         sendMessage("Welcome! \nWrite -auth to start chatting!");
         while (true){
-
             String inboundMessage = in.readUTF();
             if(inboundMessage.startsWith("-auth")){
                 String[] credentials = inboundMessage.split("\\s");
@@ -101,6 +101,7 @@ public class ClientHandler {
                         .ifPresentOrElse(
                                 username -> {
                                     if (!server.isUsernameOccupied(username)) {
+                                        timeout(0);
                                         server.broadcastMessage(String.format("User[%s] is logged in", username));
                                         name = username;
                                         server.addClient(this);

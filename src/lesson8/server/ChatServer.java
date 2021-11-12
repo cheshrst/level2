@@ -56,7 +56,6 @@ public class ChatServer {
     }
 
     public void broadcastMessage(String message){
-
         loggedClients.forEach((ClientHandler ch) -> {
             ch.sendMessage(message);
         });
@@ -68,37 +67,10 @@ public class ChatServer {
             if (client.getName().equals(to) && isUsernameOccupied(to)) {
                 client.sendMessage("[Msg from: " + from + "] " + msg);
                 break;
+            }else{
+                client.sendMessage("Offline user");
             }
         }
-//        public void clientLost(){
-//        {
-//            loggedClients.forEach((ClientHandler ch) -> {
-//                if(!ch.equals(loggedClients)){
-//                    removeUsername(ch);
-//                    System.out.println(ch + "leave");
-//
-//                }
-//            });
-//
-//        }
-//    }
 
     }
 }
-//    public void timeoutStart(int time){
-//        Thread timeoutThread = new Thread(()->{
-//            try {
-//                Thread.sleep(time);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            try {
-//                socket.close();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        });timeoutThread.start();
-//    }
-//    public void timeoutStop(){
-//        Thread timeoutThread = new Thread(()->{});timeoutThread.interrupt();
-//    }
